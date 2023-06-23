@@ -1,0 +1,13 @@
+{% extends 'base.j2' %}
+{% block content %}
+<div class="content-row">
+    <div class="col">
+        <h1>music tailored to the fan in you</h1>
+        <p>Get hot playlist and song of the day from popular artists</p>
+        <div><a href="#" class="btn">Start listening</a></div>
+    </div>
+     <div class="col">
+       <img src="{{ url_for('static', filename='images/jukebox-girl-large.png')}}" alt="" >
+     </div>
+</div>
+{% endblock %}
