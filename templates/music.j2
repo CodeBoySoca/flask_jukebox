@@ -1,4 +1,175 @@
 {% extends 'base.j2' %}
 {% block content %}
+<div class="jukebox-container">
+    <h2>Your Music</h2>
+    <div class="tab">
+       <button id="playlist-button">Playlists</button>
+       <button id="song-button">Songs</button>
+    </div>
 
+ <div class="content"> 
+    <div class="playlists">
+        
+        <div class="artist">   
+            <img src="{{ url_for('static', filename='images/kingnas.jpg')}}" alt="">
+            <div class="details"> 
+              <p>Da Goats</p>
+              <p>Hip Hop</p>
+            </div>
+            <img src="{{ url_for('static', filename='images/heart-regular.png')}}" alt="">
+        </div>
+
+   
+    
+    <div class="track-details">
+       
+        <div class="tracks">
+          <ul>
+            <li>Nas</li>
+            <li>The Pressure</li>
+            <li class="duration">3:07</li>
+          </ul>
+          <ul>
+            <li>Nas</li>
+            <li>The Pressure</li>
+            <li class="duration">3:07</li>
+          </ul>
+          <ul>
+            <li>Nas</li>
+            <li>The Pressure</li>
+            <li class="duration">3:07</li>
+          </ul>
+          <ul>
+            <li>Nas</li>
+            <li>The Pressure</li>
+            <li class="duration">3:07</li>
+          </ul>
+          <ul>
+            <li>Nas</li>
+            <li>The Pressure</li>
+            <li class="duration">3:07</li>
+          </ul>
+          <ul>
+            <li>Nas</li>
+            <li>The Pressure</li>
+            <li class="duration">3:07</li>
+          </ul>
+          <ul>
+            <li>Nas</li>
+            <li>The Pressure</li>
+            <li class="duration">3:07</li>
+          </ul>
+          <ul>
+            <li>Nas</li>
+            <li>The Pressure</li>
+            <li class="duration">3:07</li>
+          </ul>
+    </div>
+
+
+    </div>
+
+    <div class="track-footer">
+        <ul>
+        <li><img src="{{ url_for('static', filename='images/heart-solid.png')}}" alt="">78</li>  
+        <li><img src="{{ url_for('static', filename='images/headphones.png')}}" alt="">122</li>  
+        </ul>
+    </div>
+
+</div> 
+
+
+    <div class="songs">
+       
+        <div class="artist">   
+            <img src="{{ url_for('static', filename='images/jayz.jpg')}}" alt="">
+            <div class="details"> 
+              <p>Nas</p>
+              <p>The Pressure</p>
+            </div>
+            <ul>
+                <li>Hip Hop</li>
+                <li><img src="{{ url_for('static', filename='images/heart-solid.png')}}" alt=""><span>122</span></li>
+            </ul>
+        </div>
+
+        <div class="artist">   
+            <img src="{{ url_for('static', filename='images/download-14.jpg')}}" alt="">
+            <div class="details"> 
+              <p>Sade</p>
+              <p>Promise</p>
+            </div>
+            <ul>
+                <li>R&B</li>
+                <li><img src="{{ url_for('static', filename='images/heart-solid.png')}}" alt=""><span>122</span></li>
+            </ul>
+        </div>
+
+        <div class="artist">   
+            <img src="{{ url_for('static', filename='images/download-14.jpg')}}" alt="">
+            <div class="details"> 
+              <p>Sade</p>
+              <p>No Ordinary Love</p>
+            </div>
+            <ul>
+                <li>R&B</li>
+                <li><img src="{{ url_for('static', filename='images/heart-solid.png')}}" alt=""><span>122</span></li>
+            </ul>
+        </div>
+
+
+        <div class="artist">   
+            <img src="{{ url_for('static', filename='images/download-20.jpg')}}" alt="">
+            <div class="details"> 
+              <p>Gal Costa</p>
+              <p>Meu Bem, Meu mal</p>
+            </div>
+            <ul>
+                <li>Samba</li>
+                <li><img src="{{ url_for('static', filename='images/heart-solid.png')}}" alt=""><span>122</span></li>
+            </ul>
+        </div>
+
+        <div class="artist">   
+            <img src="{{ url_for('static', filename='images/download-1.jpg')}}" alt="">
+            <div class="details"> 
+              <p>Nas</p>
+              <p>Nas is Like</p>
+            </div>
+            <ul>
+                <li>Hip Hop</li>
+                <li><img src="{{ url_for('static', filename='images/heart-solid.png')}}" alt=""><span>122</span></li>
+            </ul>
+        </div>
+
+        <div class="artist">   
+            <img src="{{ url_for('static', filename='images/download-6.jpg')}}" alt="">
+            <div class="details"> 
+              <p>Nas</p>
+              <p>Book Of Rhymes</p>
+            </div>
+            <ul>
+                <li>Hip Hop</li>
+                <li><img src="{{ url_for('static', filename='images/heart-solid.png')}}" alt=""><span>122</span></li>
+            </ul>
+        </div>
+
+   
+    
+
+
+  
+
+
+
+    </div> 
+
+  </div>
+    
+    <div id="music-footer-container">
+      <button type="button">Add song</button>
+      <button type="button">create playlist</button>
+    </div>  
+
+</div>
 {% endblock %}
