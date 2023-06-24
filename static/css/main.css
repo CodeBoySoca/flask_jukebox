@@ -440,6 +440,12 @@ footer svg {
     justify-content: flex-start;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin: 0 !important;
+    cursor: pointer;
+}
+
+
+.jukebox-container .songs .artist:hover {
+    background: rgba(236, 61, 187, 0.3);
 }
 
 .jukebox-container .songs .artist img {
