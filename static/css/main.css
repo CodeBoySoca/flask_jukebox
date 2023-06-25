@@ -109,7 +109,10 @@ nav ul li a:hover {
     width: 50%;
     height: 60px;
     background: #E5E59E;
-    margin: 0 auto;
+    box-shadow: 4px 1px 1px 0px #DE1A8B;
+    margin: 25px auto 0 auto;
+    cursor: pointer;
+    border: 1px solid #0D0D0D;
 }
 
 .content-row .col div a {
@@ -118,7 +121,6 @@ nav ul li a:hover {
     text-decoration: none;
     display: block;
     text-align: center;
-    margin-top: 25px;
     padding-top: 15px;
 }
 
