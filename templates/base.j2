@@ -17,7 +17,7 @@
        </div> 
        <nav>
          <ul>
-          <li><a href="" id="search">&#8981;</a></li>
+           <li><a href="#" id="search">&#8981;</a></li>
            <li><a href="{{ url_for('songs')}}">YOUR MUSIC</a></li>
            <li><a href="{{ url_for('playlists')}}">PLAYLISTS</a></li>
            <li><a href="{{ url_for('login')}}">LOG IN</a></li>
@@ -35,9 +35,35 @@
         <div class="search">
             <input type="text" class="search-results" placeholder="&#8981; Search"> 
             <div class="search-results"></div> 
-        </div> 
-
+        </div>
     </div>
+
+    <div class="song-overlay">
+        <div class="close">X</div> 
+        <div class="song-container">
+            <h2>ADD SONG</h2>
+            <form method="post">
+                <input type="text" name="artist" placeholder="Name of artist" required>
+                <input type="text" name="title" placeholder="Song title" required>
+                <input type="text" name="genre" placeholder="Genre" required>
+                <input type="submit" value="SAVE SONG">
+            </form>
+        </div> 
+    </div>
+
+    <div class="playlist-overlay">
+        <div class="close">X</div> 
+        <div class="music-playlist-container">
+            <h2>CREATE PLAYLIST</h2>
+            <form method="post">
+                <input type="text" name="playlist-name" placeholder="Playlist name" required>
+                <input type="text" name="playlist-genre" placeholder="Genre" required>
+                <input type="submit" value="SAVE PLAYLIST">
+            </form>
+        </div> 
+    </div>
+
+
      {% block content %}
      {% endblock %}
     

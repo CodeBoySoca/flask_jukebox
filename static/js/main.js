@@ -1,10 +1,10 @@
 $(() => {
     $('#playlist-button').on('click', (e) => {
          $('.jukebox-container .songs').hide()
-         $('.jukebox-container .playlists').show()
+         $('.jukebox-container .music-playlists').show()
     })
     $('#song-button').on('click', (e) => {
-        $('.jukebox-container .playlists').hide()
+        $('.jukebox-container .music-playlists').hide()
         $('.jukebox-container .songs').show()
     })
 
@@ -23,15 +23,28 @@ $(() => {
 
 
     $('#search').on('click', (e) => {
-        e.preventDefault()
         $('.search-overlay').show()
 
     })
 
     $('.close').on('click', (e) => {
-        //e.preventDefault()
-        $('.search-overlay, .lyrics-overlay').hide()
+        $('.search-overlay, .lyrics-overlay, .song-overlay, .playlist-overlay').hide()
 
     })
+
+
+    $('#add-song').on('click', (e) => {
+        $('.song-overlay').show()
+
+    })
+
+    $('.add-playlist').on('click', (e) => {
+        $('.playlist-overlay').show()
+
+    })
+
+    //background: #E5E59E;
+    // background: rgba(236, 61, 187, 0.4);
+    //    background: rgba(217, 45, 45, 0.4);
 
 })

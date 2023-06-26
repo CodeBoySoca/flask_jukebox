@@ -8,7 +8,7 @@
     </div>
 
  <div class="content"> 
-    <div class="playlists">
+    <div class="music-playlists">
         
         <div class="artist">   
             <img src="{{ url_for('static', filename='images/kingnas.jpg')}}" alt="">
@@ -158,18 +158,15 @@
     
 
 
-  
-
-
-
     </div> 
 
   </div>
     
     <div id="music-footer-container">
-      <button type="button">Add song</button>
-      <button type="button">create playlist</button>
+      <button type="button" id="add-song">Add song</button>
+      <button type="button" class="add-playlist">create playlist</button>
     </div>  
 </div>
+
 {% include 'footer.j2' %}
 {% endblock %}

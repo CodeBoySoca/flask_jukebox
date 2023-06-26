@@ -26,6 +26,29 @@ body {
     width: 100%;
     height: 100vh;
     z-index: 999 !important;
+    background: rgba(158, 229, 226, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+.song-overlay {
+    width: 100%;
+    height: 100vh;
+    z-index: 999 !important;
+    background: rgba(229, 229, 158, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.playlist-overlay {
+    width: 100%;
+    height: 100vh;
+    z-index: 999 !important;
     background: rgb(158, 229, 226, 0.9);
     position: fixed;
     top: 0;
@@ -96,6 +119,59 @@ body {
     padding: 3%;
 }
 
+.music-playlist-container,
+.song-container {
+    width: 20%;
+    height: 300px;
+    border-radius: 50px;
+    background: #fafafa;
+    padding: 4%;
+    margin: 12% auto 0 auto;
+    z-index: 999999 !important;
+}
+
+.music-playlist-container {
+    height: 220px !important;
+}
+
+.music-playlist-container h2,
+.song-container h2 {
+    font: 900 1.4em phosphate, sans-serif;
+    text-align: left;
+    margin: 0 auto 25px auto;
+    color: #0D0D0D;
+    line-height: 0.4em;
+}
+
+
+.music-playlist-container form,
+.song-container form {
+    margin-top: 25px;
+}
+
+.music-playlist-container input[type='text'],
+.song-container input[type='text'] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+}
+
+.music-playlist-container input[type='submit'],
+.song-container input[type='submit'] {
+    width: 100%;
+    height: 60px;
+    background: #E5E59E;
+    box-shadow: 4px 1px 1px 0px #DE1A8B;
+    margin: 0 auto 0 auto;
+    cursor: pointer;
+    border: 1px solid #0D0D0D;
+    font: 900 1.5rem Phosphate, sans-serif;
+    color: #DE1A8B;
+}
+
+
+
+/******************/
 
 
 
@@ -328,9 +404,6 @@ footer svg {
     z-index: 999999 !important;
 }
 
-
-
-
 .jukebox-container h2 {
     font: 900 1.4em phosphate, sans-serif;
     text-align: left;
@@ -339,22 +412,14 @@ footer svg {
     line-height: 0.4em;
 }
 
-.jukebox-container .playlists {}
-
-
-
-
-
 .jukebox-container ul li {
     list-style-type: none;
     display: inline;
 }
 
-
 .jukebox-container ul li a {
     color: #0D0D0D;
 }
-
 
 .jukebox-container .tab {
     margin: 0 auto;
@@ -385,7 +450,7 @@ footer svg {
     text-align: left;
 }
 
-.jukebox-container .playlists {
+.jukebox-container .music-playlists {
     font: 900 1.2em Proxima Nova;
     text-align: left;
 }
@@ -421,17 +486,14 @@ footer svg {
 
 }
 
-
-
-
 .artist {
     width: 100%;
     height: 75px;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin-bottom: 25px;
+    background: #E5E59E;
 }
 
 .details {
@@ -458,7 +520,6 @@ footer svg {
     margin: auto 0;
     cursor: pointer;
     display: block;
-
 }
 
 .track-details {
@@ -653,19 +714,60 @@ footer svg {
 
 /* Playlist */
 
-.artist:nth-child(odd) {
-    background: #E5E59E;
+.playlist-container {
+    height: 400px !important;
 }
 
-.artist:nth-child(even) {
-    background: rgba(236, 61, 187, 0.4);
+.playlist-container h2 {
+    margin-bottom: 15px !important;
 }
 
-.artist:last-of-type {
-    background: rgba(217, 45, 45, 0.4);
+.playlist-container p {
+    font: 400 1.1em Proxima Nova;
+    text-align: left;
+    margin-bottom: 15px !important;
 }
 
-#playlist-playlist-button {
+.playlist-container .details p {
+    font: 900 1em Proxima Nova;
+    margin-bottom: 0 !important;
+}
+
+.playlist-container .details p:last-of-type {
+    font: 600 1em Proxima Nova;
+    margin-bottom: 0 !important;
+}
+
+.playlist-container .playlists {
+    font: 900 1em Proxima Nova;
+    text-align: left;
+}
+
+.jukebox-container .playlists:last-of-type {
+    margin-bottom: 25px;
+}
+
+
+.playlists .artist {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.playlists .details {
+    width: 75%;
+    height: auto;
+    padding: 15px 0;
+}
+
+
+.add-playlist {
     background: #E5E59E;
     width: 100%;
     height: 60px;
@@ -677,28 +779,10 @@ footer svg {
     cursor: pointer;
 }
 
-
-/* @keyframes scrollText {
-    0% {
-        transform: translateY(100%);
-        z-index: 9999 !important;
-    }
-
-    100% {
-        transform: translateY(-100%);
-        z-index: 9999 !important;
-    }
-}
- */
-
-
-
-
-
+/******************/
 
 
 /* music - songs */
-
 
 .jukebox-container .songs {}
 
@@ -709,8 +793,6 @@ footer svg {
     width: 100%;
     height: 400px;
 }
-
-
 
 .jukebox-container .songs .artist {
     width: 100%;
@@ -758,9 +840,7 @@ footer svg {
     border-radius: 0 !important;
     display: inline-block !important;
     margin-top: 5px;
-
 }
-
 
 .jukebox-container .songs .artist ul li span {
     display: inline-block !important;
@@ -786,6 +866,11 @@ footer svg {
     font-size: 0.8em !important;
     font-weight: 900;
 }
+
+/******************/
+
+
+/* Login/Registration */
 
 .login {
     width: 25%;
@@ -894,13 +979,32 @@ form input::placeholder {
 
 */
 
-
-
 .jukebox-container ul li a {
     text-decoration: none;
 }
 
+/******************/
 
+
+/* Animations */
+
+
+/* @keyframes scrollText {
+    0% {
+        transform: translateY(100%);
+        z-index: 9999 !important;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        z-index: 9999 !important;
+    }
+}
+ */
+
+/******************/
+
+/* Media Queries */
 
 @media(max-width: 1024px) {
     nav ul {
@@ -1068,3 +1172,5 @@ form input::placeholder {
     }
 
 }
+
+/******************/

@@ -1,7 +1,8 @@
 {% extends 'base.j2' %}
 {% block content %}
-<div class="jukebox-container">
+<div class="jukebox-container playlist-container">
     <h2>Top Playlist</h2>
+    <p>Here are some popular playlists</p>
       <div class="playlists">
         <div class="artist">  
             <img src="{{ url_for('static', filename='images/kingnas.jpg')}}" alt="">
@@ -54,7 +55,7 @@
         <li></li>  
         </ul>
     </div> -->
-    <button id="playlist-playlist-button">create playlist</button>
+    <button class="playlist-playlist-button add-playlist">create playlist</button>
    </div>
 </div>
 {% include 'footer.j2' %}
