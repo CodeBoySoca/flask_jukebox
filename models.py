@@ -9,6 +9,7 @@ import secrets
 import lyricsgenius
 import shutil
 import io
+import uuid
 
 load_dotenv('.env')
 Frame._client = MongoClient(os.getenv('DATABASE_URI'))
@@ -47,12 +48,13 @@ class Song(SubFrame):
         'album',
         'release_date',
         'likes',
-        'genre',
-        'song_id'
+        'genre'
     }
 
-    def add():
+    def add(user_id, song):
         pass
+        #Song.get_cover_art(song)
+        
 
     def get_cover_art(song):
         tag = TinyTag.get(f'uploads/songs/{song}', image=True)
@@ -61,6 +63,11 @@ class Song(SubFrame):
         im.save(f'uploads/images/{song}.png')
         return tag
 
+    def search():
+        pass
+
+    def get_lyrics():
+        pass
 
 
     def delete():
@@ -77,6 +84,7 @@ class Song(SubFrame):
 
 class Playlist(SubFrame):
     _fields = {
+        'playlist_id',
         'name',
         'genre',
         'availability',

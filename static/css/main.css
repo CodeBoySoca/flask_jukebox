@@ -72,6 +72,20 @@ nav ul li a:hover {
     border-bottom: 5px solid #DE1A8B;
 }
 
+#search {
+    color: #0D0D0D;
+    font-size: 2.8rem;
+    display: inline-block !important;
+    position: relative;
+    top: 8px;
+}
+
+#search:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+
 .content-row {
     display: flex;
     flex-direction: row;
@@ -139,6 +153,7 @@ footer {
     position: fixed;
     bottom: 0;
     z-index: -9 !important;
+    width: 100%;
 }
 
 #footer-content {
@@ -150,9 +165,43 @@ footer {
 
 }
 
+
 footer svg {
+    width: 100%;
     height: 100%;
 }
+
+
+/* 
+
+#footer-graphic {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: translate 15s infinite linear;
+}
+
+footer svg {
+    position: absolute;
+    animation: upDown 1.5s alternate infinite ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes upDown {
+    to {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes translate {
+    to {
+        transform: translateX(100%);
+        width: 100%; 
+    }
+} */
 
 
 #footer-content ul {
@@ -284,12 +333,12 @@ footer svg {
 }
 
 
-.playlists {}
+
 
 .artist {
     width: 100%;
     height: 75px;
-    background: #E5E59E;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -421,8 +470,8 @@ footer svg {
 
 #track-header {
     width: 100%;
-    height: 25px;
-    padding: 5px 0;
+    height: 20px;
+    padding: 1px 0 10px 0;
     background: #9EE5E2;
 }
 
@@ -442,7 +491,7 @@ footer svg {
 #track-body {
     display: flex;
     flex-direction: row;
-    width: 30%;
+    width: 45%;
     margin: 0 auto;
     padding-top: 8px;
 }
@@ -501,8 +550,43 @@ footer svg {
     height: 12px;
 }
 
+#track-container button {
+    border: 2px solid #0D0D0D;
+    width: 25%;
+    height: 45px;
+    margin-left: 35px;
+    margin-top: 5px;
+    background: none;
+    color: #0D0D0D;
+    font: 500 0.9em Phosphate, sans-serif;
+    cursor: pointer;
+}
 
+/* Playlist */
 
+.artist:nth-child(odd) {
+    background: #E5E59E;
+}
+
+.artist:nth-child(even) {
+    background: rgba(236, 61, 187, 0.4);
+}
+
+.artist:last-of-type {
+    background: rgba(217, 45, 45, 0.4);
+}
+
+#playlist-playlist-button {
+    background: #E5E59E;
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    font: 600 1.2em phosphate, sans-serif;
+    box-shadow: 4px 1px 1px 0px #DE1A8B;
+    text-align: center;
+    color: #DE1A8B;
+    cursor: pointer;
+}
 
 
 /* @keyframes scrollText {

@@ -2,13 +2,43 @@
 {% block content %}
 <div class="jukebox-container">
     <h2>Top Playlist</h2>
-      <div class="playlist-details">
+      <div class="playlists">
         <div class="artist">  
-            <img src="" alt="">
-            <p></p>
-            <p></p>
+            <img src="{{ url_for('static', filename='images/kingnas.jpg')}}" alt="">
+            <div class="details"> 
+                <p>Da Goats</p>
+                <p>Hip Hop</p>
+            </div>
+            <img src="{{ url_for('static', filename='images/heart-regular.png')}}" alt="">  
         </div>
-      </div>
+
+
+
+
+    <div class="playlists">
+        <div class="artist">  
+            <img src="{{ url_for('static', filename='images/kingnas.jpg')}}" alt="">
+            <div class="details"> 
+                <p>Da Goats</p>
+                <p>Hip Hop</p>
+            </div>
+            <img src="{{ url_for('static', filename='images/heart-regular.png')}}" alt="">  
+        </div>
+    </div>   
+     
+    <div class="playlists">
+        <div class="artist">  
+            <img src="{{ url_for('static', filename='images/kingnas.jpg')}}" alt="">
+            <div class="details"> 
+                <p>Da Goats</p>
+                <p>Hip Hop</p>
+            </div>
+            <img src="{{ url_for('static', filename='images/heart-regular.png')}}" alt="">  
+        </div>
+    </div>
+
+
+<!--
     <div class="track-details">
        <div class="tracks">
           <p></p>
@@ -23,8 +53,9 @@
         <li></li>  
         <li></li>  
         </ul>
-    </div>
-    <a href="">create playlist</a>
+    </div> -->
+    <button id="playlist-playlist-button">create playlist</button>
+   </div>
 </div>
 {% include 'footer.j2' %}
 {% endblock %}
