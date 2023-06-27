@@ -126,7 +126,7 @@ body {
     border-radius: 50px;
     background: #fafafa;
     padding: 4%;
-    margin: 12% auto 0 auto;
+    margin: 15% auto 0 auto;
     z-index: 999999 !important;
 }
 
@@ -458,14 +458,15 @@ footer svg {
 .content {
     border: 1px solid rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 400px;
+    height: 420px;
     margin: 0 auto 50px auto;
 }
 
 .jukebox-container #music-footer-container {
     width: 100%;
     height: auto;
-    margin: 75px 0;
+    margin: 25px 0;
+
 }
 
 .jukebox-container #music-footer-container button {
@@ -492,7 +493,6 @@ footer svg {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-bottom: 25px;
     background: #E5E59E;
 }
 
@@ -531,7 +531,6 @@ footer svg {
     margin-bottom: 25px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-
 }
 
 .tracks {
@@ -632,7 +631,6 @@ footer svg {
     font: 900 0.8em Phosphate, sans-serif;
     /* transform: translateY(100%);
     animation: scrollText 5s linear infinite; */
-
 }
 
 

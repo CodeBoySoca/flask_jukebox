@@ -76,6 +76,9 @@ class Song(SubFrame):
     def edit():
         pass
 
+    def retrieve_random_track():
+        pass
+
     def retrieve_track():
         pass
 
