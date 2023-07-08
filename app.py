@@ -1,6 +1,5 @@
-from flask import Flask, render_template, redirect, url_for, session
+from flask import Flask, render_template, redirect, url_for, session, request
 from flask_session import Session
-
 
 app = Flask(__name__)
 Session(app)
@@ -9,12 +8,16 @@ Session(app)
 def homepage():
     return render_template('index.j2')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        form = request.form.to_dict()
     return render_template('login.j2')
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
+    if request.method == 'POST':
+        form = request.form.to_dict()
     return render_template('register.j2')
 
 @app.route('/logout')
@@ -22,12 +25,16 @@ def logout():
     session.clear()
     return redirect(url_for('homepage'))
 
-@app.route('/playlists')
+@app.route('/playlists', methods=['GET', 'POST'])
 def playlists():
+    if request.method == 'POST':
+       form = request.form.to_dict()
     return render_template('playlists.j2')
 
-@app.route('/your-music')
+@app.route('/your-music',  methods=['GET', 'POST'])
 def songs():
+    if request.method == 'POST':
+        form = request.form.to_dict()
     return render_template('music.j2')
 
 @app.route('/settings')

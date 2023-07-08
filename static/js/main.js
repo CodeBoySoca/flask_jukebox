@@ -34,12 +34,23 @@ $(() => {
 
 
     $('#add-song').on('click', (e) => {
-        $('.song-overlay').show()
+       $('.song-overlay').show()
+       $.ajax({
+          type: 'POST',
+          url: '/your-music',
+          data: $('form').serialize()
+       })
+       
 
     })
 
     $('.add-playlist').on('click', (e) => {
         $('.playlist-overlay').show()
+        $.ajax({
+            type: 'POST',
+            url: '/playlists',
+            data: $('form').serialize()
+        })
 
     })
 
